@@ -1,0 +1,28 @@
+      
+                  <table class="table table-sm  table-responsive-sm table-responsive-md table-responsive-lg">
+					<thead class="thead-ligth">
+						<tr>
+							<th scope="col" colspan="2">Id</th>
+							<th scope="col" colspan="2">Nombre</th>
+							<th scope="col" colspan="2">Perfil</th>
+							<th scope="col" colspan="2">Cliente</th>
+							<th scope="col" colspan="2">Area</th>
+							<th scope="col" colspan="2">Gerente</th>
+							<th scope="col" colspan="2">Gerente Comercial</th>
+							<th scope="col" colspan="2">Lider</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr *ngFor="let registroAsignado of registrosAsignados">
+							<th scope="row" colspan="2">{{registroAsignado.persona.idpersona}}</th>
+							<td colspan="2">{{registroAsignado.persona.nombre}} {{registroAsignado.persona.apellidoPaterno}} 
+							{{registroAsignado.persona.apellidoPaterno}}</td>
+							<td colspan="2">{{registroAsignado.idPerfil}}</td>
+							<td colspan="2">{{registroAsignado.idCliente.nombreCliente}}</td>
+							<td colspan="2">{{registroAsignado.idArea}}</td>
+							<td colspan="2">{{registroAsignado.idGerente}}</td>
+							<td colspan="2">{{registroAsignado.idGerenteComercial}}</td>
+							<td colspan="2">{{registroAsignado.idLider}}</td>
+						</tr>
+					</tbody>
+				</table>
