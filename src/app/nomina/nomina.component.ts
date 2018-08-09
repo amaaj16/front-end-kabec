@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
-import { Nomina } from '../models/nomina.model';
+import { Nomina } from '../modelos/nomina.model';
 import { NominaService } from './nomina.service';
 
 @Component({

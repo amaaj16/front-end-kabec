@@ -2,7 +2,7 @@ import {Injectable} from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { UrlConfigService } from '../url-config.service';
 
-import { Complemento } from '../models/complemento.model';
+import { Complemento } from '../modelos/complemento.model';
 
 
 const httpOptions = {

@@ -1,12 +1,12 @@
 export class Area {
 	idArea: any;
 	nombreArea: any;
-	Cliente: any;
+	cliente: any;
 
 	constructor(){
-		this.Cliente={
+		this.cliente={
 			idCliente: ''
-		}
+		};
 	}
 	
 

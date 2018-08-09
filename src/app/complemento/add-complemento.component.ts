@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
-import { Complemento } from '../models/complemento.model';
+import { Complemento } from '../modelos/complemento.model';
 import { ComplementoService } from './complemento.service';
 
 @Component({

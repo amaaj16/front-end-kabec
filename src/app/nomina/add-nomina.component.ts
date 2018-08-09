@@ -3,7 +3,7 @@ import { Router } from '@angular/router';
 import { LayoutService } from 'angular-admin-lte';
 
 
-import { Nomina } from '../models/nomina.model';
+import { Nomina } from '../modelos/nomina.model';
 import { NominaService } from './nomina.service';
 
 @Component({

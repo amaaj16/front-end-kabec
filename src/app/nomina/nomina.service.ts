@@ -2,7 +2,7 @@ import {Injectable} from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { UrlConfigService } from '../url-config.service';
 
-import { Nomina } from '../models/nomina.model';
+import { Nomina } from '../modelos/nomina.model';
 
 
 const httpOptions = {

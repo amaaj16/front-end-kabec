@@ -13,28 +13,14 @@ export var adminLteConf = {
 			  { label: 'Consultores no Asignados', iconClasses: 'none', route: '/noasignados' }
 		  ]
 	  },
-	{ label: 'Catalogos',iconClasses: 'fa fa-dashboard',children:[
-		{label:'Anexo',children:[
-			{ label: 'Anexos', iconClasses: 'none', route: '/showAnexos' },
-			{ label: 'Agregar Anexo', iconClasses: 'none', route: '/addAnexo' }
-		]},
-		{label:'Area',children:[
-			{ label: 'Areas', iconClasses: 'none', route: '/showAreas' },
-			{ label: 'Agregar Area', iconClasses: 'none', route: '/addAreas' }
-		]},
-
-		{ label:'Banco',children:[
-			{ label: 'Bancos', iconClasses: 'none', route: '/bancos' },
-			{ label: 'Agregar Banco', iconClasses: 'none', route: '/addbancos' }
-		]},
-		{label:'Cliente',children:[
-			{ label: 'Clientes', iconClasses: 'none', route: '/ShowClientes' },
-			{ label: 'Agregar Cliente', iconClasses: 'none', route: '/addCliente' }
-		]},
-		{label:'Complemento',children:[
-			{ label: 'Complementos', iconClasses: 'none', route: '/complemento' },
-			{ label: 'Agregar Complemento', iconClasses: 'none', route: '/addcomplemento' },
-		]}
+	{ label: 'Catálogos',iconClasses: 'fa fa-dashboard',children:[
+		{ label: 'Anexos', iconClasses: 'none', route: '/showAnexos' },
+		{ label: 'Areas', iconClasses: 'none', route: '/showAreas' },
+		{ label: 'Bancos', iconClasses: 'none', route: '/bancos' },
+		{ label: 'Clientes', iconClasses: 'none', route: '/ShowClientes' },
+		{ label: 'Complementos', iconClasses: 'none', route: '/complemento' },
+		{ label: 'Perfiles', iconClasses: 'none', route: '/perfiles' },
+		{ label: 'Nominas', iconClasses: 'none', route: '/nominas' }
 	]},
 
 	  { label: 'Registro Pagos', iconClasses: 'fa fa-dashboard', children: [
@@ -56,7 +42,8 @@ export var adminLteConf = {
 		  { label: 'Nuevo Consultor', iconClasses: 'none', route: '/nuevoconsultor' },
 		  { label: 'Búsqueda de Consultor', iconClasses: 'none', route: '/buscarconsultor' },
 		  { label: 'Bajas', iconClasses: 'none', route: '/consultarbajas' }
-	  ]}
+	  ]},
+
 		
   ]
 	}

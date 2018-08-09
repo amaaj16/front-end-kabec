@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
-import { Banco } from '../models/banco.model';
+import { Banco } from '../modelos/banco.model';
 import { BancoService } from './banco.service';
 import { LayoutService } from 'angular-admin-lte';
 

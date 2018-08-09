@@ -1,18 +1,18 @@
-                  <table class="table-list">
-					<thead>
+                  <table class="table-list table table-hover table-responsive">
+					<thead class="thead-ligth">
 						<tr>
-							<th>Id</th>
-							<th>Nombre</th>
-							<th>Correo</th>
-							<th>Telefono Celular</th>
+							<th scope="col" colspan="2">Id</th>
+							<th scope="col" colspan="2">Nombre</th>
+							<th scope="col" colspan="2">Correo</th>
+							<th scope="col" colspan="2">Telefono Celular</th>
 						</tr>
 					</thead>
 					<tbody>
 						<tr *ngFor="let noasignado of noasignados">
-							<td>{{noasignado.idpersona}}</td>
-							<td>{{noasignado.nombre}} {{noasignado.apellidoPaterno}} {{noasignado.apellidoPaterno}}</td>
-							<td>{{noasignado.correo}}</td>
-							<td>{{noasignado.telparticular}}</td>
+							<th scope="row" colspan="2">{{noasignado.idpersona}}</th>
+							<td colspan="2">{{noasignado.nombre}} {{noasignado.apellidoPaterno}} {{noasignado.apellidoPaterno}}</td>
+							<td colspan="2">{{noasignado.correo}}</td>
+							<td colspan="2">{{noasignado.telparticular}}</td>
 						</tr>
 					</tbody>
 				</table>

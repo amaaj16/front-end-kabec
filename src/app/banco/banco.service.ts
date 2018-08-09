@@ -2,7 +2,7 @@ import {Injectable} from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { UrlConfigService } from '../url-config.service';
 
-import { Banco } from '../models/banco.model';
+import { Banco } from '../modelos/banco.model';
 
 
 const httpOptions = {

@@ -53,10 +53,11 @@ import {NuevoConsultor} from './nuevoconsultor/nuevoconsultor.component';
 import {ConsultarUsuario} from './consultarusuario/consultarusuario.component';
 import {BuscarConsultor} from './buscarconsultor/buscarconsultor.component';
 import {ConsultarBajas} from './consultarbajas/consultarbajas.component';
-import { GotoindexComponent } from './gotoindex/gotoindex.component';
-import { InisessionComponent } from './inisession/inisession.component';
 import { authenticateService } from './servicios/authenticate.service';
 import {UrlConfigService} from './url-config.service';
+import { PerfilComponent } from './perfil/perfil.component';
+import { AddPerfilComponent } from './add-perfil/add-perfil.component';
+import {PerfilserviceService} from './servicios/perfilservice.service';
 @NgModule({
   declarations: [
     //lAYOUTS
@@ -85,9 +86,9 @@ import {UrlConfigService} from './url-config.service';
     RepcontratoComponent,
     ReporteasignadosComponent,
     NoasignadosComponent,
-    GotoindexComponent,
-    InisessionComponent,
-    ContratoService
+    ContratoService,
+    PerfilComponent,
+    AddPerfilComponent
 
 
   ],
@@ -113,7 +114,8 @@ import {UrlConfigService} from './url-config.service';
       NominaService,
       ComplementoService,
       ContratoService,
-      UrlConfigService
+      UrlConfigService,
+      PerfilserviceService
   ],
   bootstrap: [AppComponent]
 })

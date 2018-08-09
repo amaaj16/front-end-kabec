@@ -1,21 +1,34 @@
-<div class="col-md-6">
-<h2> Detalles del Banco</h2>
+<div class="col-xs-12">
+  <div class="center-block">
+  <div class="row">
+    <div class="col-md-4">
+      <h2 style="margin-top: 20px; margin-bottom: 0px">Bancos</h2>
+    </div>
+    
+  </div>
+  
+  <hr align="left" noshade="noshade" size="1" style="background-color: grey; margin-top: 0px; margin-bottom: 0px" />
+  <div class="row">
+    <div class="col-md-4">
+          <a routerLink="/addBancos" class="btn btn-success" style="margin-top: 20px; margin-bottom: 20px;">+Nuevo</a>
+      </div>
+  </div>
 
-<table class="table table-striped">
-  <thead>
+<table class="table-list table table-hover table-responsive-sm" style="background: white" >
+  <thead class="thead-ligth">
   <tr>
-    <th>Codigo de Banco</th>
-    <th>Nombre del Banco</th>
+    <th scope="col" colspan="2">Codigo de Banco</th>
+    <th scope="col" colspan="2">Nombre del Banco</th>
+     <th scope="col" colspan="2">Acción</th>
   </tr>
 </thead>
   <tbody>
   <tr *ngFor="let banco of bancos">
-    <td>{{banco.idBanco}}</td>
-    <td>{{banco.nombreBanco}}</td>
-    <td></td>
-    <td></td>
-    <td><button class="btn btn-danger" (click)="deleteBanco(banco)"> Borrar Banco</button></td>
+    <th scope="row" colspan="2">{{banco.idBanco}}</th>
+    <td colspan="2">{{banco.nombreBanco}}</td>
+    <td colspan="2"><button type="button" style="background-color: Transparent; outline:none;background-repeat:no-repeat; border: none;cursor:pointer; overflow: hidden" (click)="deleteBanco(banco)"><span class="fa fa-times "></span></button></td>
   </tr>
   </tbody>
 </table>
+</div>
 </div>

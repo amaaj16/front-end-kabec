@@ -1,21 +1,33 @@
-<div class="col-md-6">
-<h2> Detalles del Complemento</h2>
-
-<table class="table table-striped">
-  <thead>
+<div class="col-xs-12">
+  <div class="center-block">
+  <div class="row">
+    <div class="col-md-4">
+      <h2 style="margin-top: 20px; margin-bottom: 0px">Complementos</h2>
+    </div>
+    
+  </div>
+  
+  <hr align="left" noshade="noshade" size="1" style="background-color: grey; margin-top: 0px; margin-bottom: 0px" />
+  <div class="row">
+    <div class="col-md-4">
+          <a routerLink="/addComplementos" class="btn btn-success" style="margin-top: 20px; margin-bottom: 20px;">+Nuevo</a>
+      </div>
+  </div>
+<table class="table-list table table-hover table-responsive">
+  <thead class="thead-ligth">
   <tr>
-    <th>Codigo Complemento</th>
-    <th>Tipo Complemento</th>
+    <th scope="col" colspan="2">Codigo Complemento</th>
+    <th scope="col" colspan="2">Tipo Complemento</th>
+    <th scope="col" colspan="2">Acción</th>
   </tr>
 </thead>
   <tbody>
   <tr *ngFor="let complemento of complementos">
-    <td>{{complemento.empComplemento}}</td>
-    <td>{{complemento.tipoComplemento}}</td>
-    <td></td>
-    <td></td>
-    <td><button class="btn btn-danger" (click)="deleteComplemento(complemento)">Borrar Complemento</button></td>
+    <th scope="row" colspan="2">{{complemento.empComplemento}}</th>
+    <td colspan="2">{{complemento.tipoComplemento}}</td>
+    <td colspan="2"><button type="button" style="background-color: Transparent; outline:none;background-repeat:no-repeat; border: none;cursor:pointer; overflow: hidden" (click)="deleteComplemento(complemento)"><span class="fa fa-times "></span></button></td>
   </tr>
   </tbody>
 </table>
+</div>
 </div>

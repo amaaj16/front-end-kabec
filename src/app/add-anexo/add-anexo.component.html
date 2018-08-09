@@ -74,7 +74,7 @@
 		<label for="cliente" class="col-4 col-form-label">Cliente</label>
 		<div class="col-10">
 			<select name="cliente" class="custom-select" [(ngModel)]="anexo.cliente.idCliente" >
-				<option [value]="cliente.idCliente" *ngFor="let cliente of clientes">{{cliente.nombreCliente}}</option>
+				<option *ngFor="let cliente of clientes" [value]="cliente.idCliente" >{{cliente.nombreCliente}}</option>
 			</select>
 		</div>
 	</div>
@@ -82,7 +82,7 @@
 	<div class="form-group">
 		<label for="Anexo" class="col-4 col-form-label">Periodo</label>
 		<div class="col-10">
-			<select name="anexo" class="custom-select" [(ngModel)]="anexo.idperiodo.idperiodo" >
+			<select name="anexo" style="color:black"class="custom-select" [(ngModel)]="anexo.periodo.idperiodo" >
 				<option [value]="1" >Mensual</option>
 				<option [value]="2" >Bimestral</option>
 				<option [value]="3" >Trimestral</option>

@@ -14,7 +14,7 @@ export class Anexo {
 	tarifa: any;
 	vobo: any;
 	cliente: any;
-	idperiodo: any;
+	periodo: any;
 
   constructor(){
 	  this.cliente = {
@@ -22,7 +22,7 @@ export class Anexo {
 		  nombreCliente: ''
 	  };
 
-	  this.idperiodo = {
+	  this.periodo = {
 		  idperiodo: '',
 		  periodo: ''
 	  };

@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import {Router} from '@angular/router';
 import {Area} from '../modelos/area';
 import {ServicioAreaService} from '../servicios/servicio-area.service';
+import {ClienteService} from '../servicios/cliente.service';
+import {Cliente} from '../modelos/cliente';
 
 
 
@@ -12,8 +14,9 @@ import {ServicioAreaService} from '../servicios/servicio-area.service';
 })
 export class AreaComponent implements OnInit {
   public areas: Area[];
+  public clientes:Cliente[];
 
-  constructor(private _router: Router, private _areaService:ServicioAreaService) { }
+  constructor(private _router: Router, private _areaService:ServicioAreaService, private _clienteService:ClienteService) { }
 
 
   ngOnInit() {
@@ -28,8 +31,15 @@ export class AreaComponent implements OnInit {
   			}
   		},
   		Error=>{
-  			//console.log(<any>Error);
-  		})
+  			console.log(<any>Error);
+  		});
+
+    this._clienteService.getAllClientes().subscribe(
+      data=>{
+        this.clientes=data;
+        console.log(data);
+
+      },Error=> console.log(Error));
   }
 
   deleteArea(area:Area): void{

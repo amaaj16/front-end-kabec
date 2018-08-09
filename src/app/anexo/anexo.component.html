@@ -1,33 +1,47 @@
-<div>
-	<h2>Anexos</h2>
-
-	<table class="table-list">
-		<thead>
+<div class="col-xs-12">
+	<div class="center-block">
+	<div class="row">
+		<div class="col-md-4">
+			<h2 style="margin-top: 20px; margin-bottom: 0px">Anexos</h2>
+		</div>
+		
+	</div>
+	
+	<hr align="left" noshade="noshade" size="1" style="background-color: grey; margin-top: 0px; margin-bottom: 0px" />
+	<div class="row">
+		<div class="col-md-4">
+      		<a routerLink="/addAnexos" class="btn btn-success" style="margin-top: 20px; margin-bottom: 20px;">+Nuevo</a>
+    	</div>
+	</div>
+	<table class="table-list table table-hover table-responsive" style="background: white" >
+		<thead class="thead-ligth">
 			<tr>
-				<th>Anexo ú Orden de Compra</th>
-				<th>Clave Presupuestal</th>
-				<th>Fecha de Inicio</th>
-				<th>Fecha de Fin</th>
-				<th>importe del Anexo</th>
-				<th>Monto por Pago</th>
-				<th>Numero de Pagos</th>
-				<th>Cliente</th>
-				<th>Periodo</th>
+				<th scope="col" colspan="2">Anexo ú Orden de Compra</th>
+				<th scope="col" colspan="2">Clave Presupuestal</th>
+				<th scope="col" colspan="2">Fecha de Inicio</th>
+				<th scope="col" colspan="2">Fecha de Fin</th>
+				<th scope="col" colspan="2">importe del Anexo</th>
+				<th scope="col" colspan="2">Monto por Pago</th>
+				<th scope="col" colspan="2">Numero de Pagos</th>
+				<th scope="col" colspan="2">Cliente</th>
+				<th scope="col" colspan="2">Periodo</th>
+				<th scope="col" colspan="2">Acción</th>
 			</tr>
 		</thead>
 		<tbody>
 			<tr *ngFor="let anexo of anexos">
-				<td>{{anexo.anexooc}}</td>
-				<td>{{anexo.clavepresupuestal}}</td>
-				<td>{{anexo.fechaInicio}}</td>
-				<td>{{anexo.fechaFin}}</td>
-				<td>{{anexo.importeanexo}}</td>
-				<td>{{anexo.montoxpago}}</td>
-				<td>{{anexo.numeropagos}}</td>
-				<td>{{anexo.Cliente.nombreCliente}}</td>
-				<td>{{anexo.idperiodo.periodo}}</td>
-				<td><input type="button" name="eliminar" (click)="deleteanexo(anexo)" value="eliminar"class="btn btn-success">
+				<th scope="row" colspan="2">{{anexo.anexooc}}</th>
+				<td colspan="2">{{anexo.clavepresupuestal}}</td>
+				<td colspan="2">{{anexo.fechaInicio}}</td>
+				<td colspan="2">{{anexo.fechaFin}}</td>
+				<td colspan="2">{{anexo.importeanexo}}</td>
+				<td colspan="2">{{anexo.montoxpago}}</td>
+				<td colspan="2">{{anexo.numeropagos}}</td>
+				<td colspan="2">{{anexo.cliente.nombreCliente}}</td>
+				<td colspan="2">{{anexo.periodo.periodo}}</td>
+				<td colspan="2"><button type="button" style="background-color: Transparent; outline:none;background-repeat:no-repeat; border: none;cursor:pointer; overflow: hidden" (click)="deleteanexo(anexo)"><span class="fa fa-times"></span></button></td>
 			</tr>
 		</tbody>
 	</table>
+</div>
 </div>

@@ -12,15 +12,14 @@ import { LayoutService } from 'angular-admin-lte';
 })
 export class AddAnexoComponent implements OnInit {
 	anexo = new Anexo();
-	anexos: Anexo[];
-
-	clientes: Cliente[];
+  clientes: Cliente[];
   constructor(private  _router: Router, private _servicio: PagosAnexosService, private  _clienteServicio: ClienteService) { }
 	
   ngOnInit() {
 
   	this._clienteServicio.getAllClientes().subscribe(data=>{
 			this.clientes = data;
+      console.log(this.clientes);
   	},
     Error=>{
        console.log(Error);

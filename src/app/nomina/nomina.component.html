@@ -1,19 +1,33 @@
-<div class="col-md-6">
-<h2>Detalle Contrato Nomina</h2>
-
-<table class="table table-striped">
-  <thead>
+<div class="col-xs-12">
+  <div class="center-block">
+  <div class="row">
+    <div class="col-md-4">
+      <h2 style="margin-top: 20px; margin-bottom: 0px">Nominas</h2>
+    </div>
+    
+  </div>
+  
+  <hr align="left" noshade="noshade" size="1" style="background-color: grey; margin-top: 0px; margin-bottom: 0px" />
+  <div class="row">
+    <div class="col-md-4">
+          <a routerLink="/addNominas" class="btn btn-success" style="margin-top: 20px; margin-bottom: 20px;">+Nuevo</a>
+      </div>
+  </div>
+<table class="table-list table table-hover table-responsive">
+  <thead class="thead-ligth">
   <tr>
-    <th>Id</th>
-    <th>Contrato Nomina</th>
+    <th scope="col" colspan="2">Id</th>
+    <th scope="col" colspan="2">Contrato Nomina</th>
+    <th scope="col" colspan="2">Acción</th>
   </tr>
   </thead>
   <tbody>
   <tr *ngFor="let nomina of nominas">
     <td>{{nomina.contratoNomina}}</td>
     <td>{{nomina.tipoConNom}}</td>
-    <td><button class="btn btn-danger" (click)="deleteNomina(nomina)"> Borrar Contrato</button></td>
+    <td colspan="2"><button type="button" (click)="deleteContratoNomina " style="background-color: Transparent; outline:none;background-repeat:no-repeat; border: none;cursor:pointer; overflow: hidden"><span class="fa fa-times "></span></button></td>
   </tr>
   </tbody>
 </table>
+</div>
 </div>

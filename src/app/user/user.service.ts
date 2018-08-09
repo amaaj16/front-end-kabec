@@ -2,7 +2,7 @@ import {Injectable} from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { UrlConfigService } from '../url-config.service';
 
-import { User } from '../models/user.model';
+import { User } from '../modelos/user.model';
 
 
 const httpOptions = {

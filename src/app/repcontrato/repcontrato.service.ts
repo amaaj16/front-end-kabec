@@ -4,7 +4,7 @@ import * as FileSaver from 'file-saver';
 import * as XLSX from 'xlsx';
 import {UrlConfigService} from '../url-config.service';
 
-import { Contrato } from '../models/contrato.model';
+import { Contrato } from '../modelos/contrato.model';
 const EXCEL_TYPE = 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;charset=utf-8';
 const EXCEL_EXTENSION = '.xlsx';
 

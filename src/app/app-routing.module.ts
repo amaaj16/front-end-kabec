@@ -30,39 +30,43 @@ import {ConsultarUsuario} from './consultarusuario/consultarusuario.component';
 import {NuevoConsultor} from './nuevoconsultor/nuevoconsultor.component';
 import {BuscarConsultor} from './buscarconsultor/buscarconsultor.component';
 import {ConsultarBajas} from './consultarbajas/consultarbajas.component';
+import {PerfilComponent} from './perfil/perfil.component';
+import {AddPerfilComponent} from './add-perfil/add-perfil.component';
 
 const routes: Routes = [
 	
-	{ path: 'reporteAsignados', component: ReporteasignadosComponent },
-	{ path:'noasignados', component:NoasignadosComponent},
-	{ path: 'addCliente', component: DClienteComponent },
-	{ path: 'addAreas', component: AddAreaComponent },
-	{ path:'showAreas', component: AreaComponent},
-	{ path:'ShowClientes',component:ClienteComponent},
-	{ path:'reporteAnexo', component:ReportePagosComponent},
-	{ path: 'pagoAnexo', component: PagosAnexoComponent},
-	{ path: 'addAnexo', component: AddAnexoComponent},
-	{ path:'showAnexos',component: AnexoComponent},
+	{ path: 'reporteAsignados', component: ReporteasignadosComponent, pathMatch: 'full' },
+	{ path:'noasignados', component:NoasignadosComponent, pathMatch: 'full'},
+	{ path: 'addClientes', component: DClienteComponent, pathMatch: 'full' },
+	{ path: 'addAreas', component: AddAreaComponent, pathMatch: 'full' },
+	{ path:'showAreas', component: AreaComponent, pathMatch: 'full'},
+	{ path:'ShowClientes',component:ClienteComponent, pathMatch: 'full'},
+	{ path:'reporteAnexo', component:ReportePagosComponent, pathMatch: 'full'},
+	{ path: 'pagoAnexos', component: PagosAnexoComponent, pathMatch: 'full'},
+	{ path: 'addAnexo', component: , pathMatch: 'full'},
+	{ path:'showAnexos',component: AnexoComponent, pathMatch: 'full'},
 //bryan
-	{ path: 'users', component: UserComponent },
-	{ path: 'add', component: AddUserComponent },
+	{ path: 'users', component: UserComponent, pathMatch: 'full' },
+	{ path: 'add', component: AddUserComponent, pathMatch: 'full' },
 
-	{ path: 'bancos', component: BancoComponent },
-	{ path: 'addbancos', component: AddBancoComponent },
+	{ path: 'bancos', component: BancoComponent, pathMatch: 'full' },
+	{ path: 'addBancos', component: AddBancoComponent, pathMatch: 'full' },
 
-	{ path: 'nomina', component: NominaComponent },
-	{ path: 'addnomina', component: AddNominaComponent },
+	{ path: 'nominas', component: NominaComponent, pathMatch: 'full' },
+	{ path: 'addNominas', component: AddNominaComponent, pathMatch: 'full' },
 
-	{ path: 'complemento', component: ComplementoComponent },
-	{ path: 'addcomplemento', component: AddComplementoComponent },
+	{ path: 'complemento', component: ComplementoComponent, pathMatch: 'full' },
+	{ path: 'addComplementos', component: AddComplementoComponent, pathMatch: 'full' },
 
-	{ path: 'contrato', component: RepcontratoComponent },
+	{ path: 'contrato', component: RepcontratoComponent, pathMatch: 'full' },
 	{ path:'nuevousuario', component:NuevoUsuario, pathMatch:'full'},
 	{ path: 'consultarusuario', component: ConsultarUsuario, pathMatch: 'full' },
 	{ path:'nuevoconsultor', component:NuevoConsultor, pathMatch:'full'},
 	{ path: 'buscarconsultor', component: BuscarConsultor, pathMatch: 'full' },
 	{ path: 'consultarbajas', component: ConsultarBajas, pathMatch: 'full' },
-	{ path:'',component: AreaComponent}
+	{ path:'',component: AreaComponent, pathMatch: 'full'},
+	{ path:'perfiles', component:PerfilComponent, pathMatch: 'full'},
+	{ path:'addPerfiles', component:AddPerfilComponent, pathMatch: 'full'}
 
 ];
 
