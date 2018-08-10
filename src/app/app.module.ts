@@ -3,10 +3,11 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpModule, Http } from '@angular/http';
 import { NgModule } from '@angular/core';
 import { Router } from '@angular/router';
-import { HttpClientModule, HttpClient } from '@angular/common/http';
+import { HttpClientModule, HttpClient,HttpClientXsrfModule} from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import {FormsModule} from '@angular/forms';
 import { CoreModule } from './core/core.module';
+
 
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 
@@ -101,7 +102,11 @@ import {PerfilserviceService} from './servicios/perfilservice.service';
     BoxModule,
     LayoutModule.forRoot(adminLteConf),
     CoreModule,
-    LoadingPageModule, MaterialBarModule
+    LoadingPageModule, MaterialBarModule,
+    HttpClientXsrfModule.withOptions({
+      cookieName:'myCookie',
+      headerName 'myHeader'
+    })
 
   ],
   providers: [
