@@ -6,14 +6,14 @@ export var adminLteConf = {
   sidebarLeftMenu: [
 	{ label: 'Menu de Navegación', separator: true },
 	  {
-		  label: 'Reportes', iconClasses: 'fa fa-dashboard', children: [
-		  	  { label: 'Contratos', iconClasses: 'none', route: '/contrato' },
+		  label: 'Reportes', iconClasses: 'fa fa-files-o', children: [
 			  { label: 'Pago de Anexos', iconClasses: 'none', route: '/reporteAnexo' },
+			  { label: 'Contratos', iconClasses: 'none', route: '/contrato' },
 			  { label: 'Consultores Asignados', iconClasses: 'none', route: '/reporteAsignados' },
 			  { label: 'Consultores no Asignados', iconClasses: 'none', route: '/noasignados' }
 		  ]
 	  },
-	{ label: 'Catálogos',iconClasses: 'fa fa-dashboard',children:[
+	{ label: 'Catálogos',iconClasses: 'fa fa-folder',children:[
 		{ label: 'Anexos', iconClasses: 'none', route: '/showAnexos' },
 		{ label: 'Areas', iconClasses: 'none', route: '/showAreas' },
 		{ label: 'Bancos', iconClasses: 'none', route: '/bancos' },
@@ -23,22 +23,23 @@ export var adminLteConf = {
 		{ label: 'Nominas', iconClasses: 'none', route: '/nominas' }
 	]},
 
-	  { label: 'Registro Pagos', iconClasses: 'fa fa-dashboard', children: [
-		  { label: 'Pago de Anexo', iconClasses: 'none', route: '/pagoAnexo' }
+	  { label: 'Registro Pagos', iconClasses: 'fa fa-money', children: [
+		  { label: 'Pago de Anexo', iconClasses: 'none', route: '/pagoAnexos' }
 	  ]},
-
+	  /*
 	  {label:'Inicio', iconClasses:'fa fa-dashboard', children:[
 	  	  {label:'Indice de Consultores',iconClasses:'none',route:'/'}
+	  ]},*/
+
+	  {label:'Metricas', iconClasses:'fa fa-pie-chart',children:[
+	  		{ label: 'Metricas', iconClasses: 'none', route: '/nuevousuario' },
 	  ]},
 
-	  {label:'Metricas', iconCLasses:'fa fa-dashboard',children:[
-	  ]},
-
-	  {label:'Administración',iconClasses:'fa fa-dashboard',children:[
+	  {label:'Administración',iconClasses:'fa fa-laptop',children:[
 		  { label: 'Nuevo Usuario', iconClasses: 'none', route: '/nuevousuario' },
 		  { label: 'Consultar Usuario', iconClasses: 'none', route: '/consultarusuario' }
 	  ]},
-	  {label:'Contratación',iconClasses:'fa fa-dashboard',children:[
+	  {label:'Contratación',iconClasses:'fa fa-edit',children:[
 		  { label: 'Nuevo Consultor', iconClasses: 'none', route: '/nuevoconsultor' },
 		  { label: 'Búsqueda de Consultor', iconClasses: 'none', route: '/buscarconsultor' },
 		  { label: 'Bajas', iconClasses: 'none', route: '/consultarbajas' }

@@ -4,5 +4,6 @@ export class User {
 	public name: string;
 	public enable: any;
 	public password: string;
+	public sexo: string;
 
 }

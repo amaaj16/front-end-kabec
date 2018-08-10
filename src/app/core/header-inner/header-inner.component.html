@@ -4,16 +4,30 @@
 
     <li mk-dropdown type="list" [isWrapper]="false" class="user user-menu">
       <mk-dropdown-toggle >
-        <a #toggleElement>
-          <img src="dist/front-end-kabec/assets/img/avatar04.png" class="user-image" alt="User Image">
+        <a #toggleElement *ngIf="user.sexo=='M'">
+          <img src="dist/front-end-kabec/assets/img/avatar5.png" class="user-image" alt="User Image">
+          <span class="hidden-xs">{{user.username}}</span>
+        </a>
+
+        <a #toggleElement *ngIf="user.sexo=='F'">
+          <img src="dist/front-end-kabec/assets/img/avatar2.png" class="user-image" alt="User Image">
           <span class="hidden-xs">{{user.username}}</span>
         </a>
       </mk-dropdown-toggle>
       <mk-dropdown-menu>
-        <li class="user-header">
-          <img src="dist/front-end-kabec/assets/img/avatar04.png" class="img-circle" alt="User Image">
+        <li class="user-header" *ngIf="user.sexo=='M'">
+          <img src="dist/front-end-kabec/assets/img/avatar5.png" class="img-circle" alt="User Image">
 
-          <p >
+          <p>
+          {{user.name}}
+            <small>role</small>
+          </p>
+        </li>
+
+        <li class="user-header" *ngIf="user.sexo=='F'">
+          <img src="dist/front-end-kabec/assets/img/avatar2.png" class="img-circle" alt="User Image">
+
+          <p>
           {{user.name}}
             <small>role</small>
           </p>

@@ -2,12 +2,12 @@
 	<div class="center-block">
 	<div class="row">
 		<div class="col-md-4">
-			<h2 style="margin-top: 20px; margin-bottom: 0px">Clientes</h2>
+			<h2 style="margin-top: 20px; margin-bottom: 0px;">Clientes</h2>
 		</div>
 		
 	</div>
 	
-	<hr align="left" noshade="noshade" size="1" style="background-color: grey; margin-top: 0px; margin-bottom: 0px" />
+	<hr style="margin-top: 0px; margin-bottom: 0px;  border: 0; height: 1px; background: #333; background-image: linear-gradient(to right, #ccc, #333, #ccc);"/>
 	<div class="row">
 		<div class="col-md-4">
       		<a routerLink="/addClientes" class="btn btn-success" style="margin-top: 20px; margin-bottom: 20px;">+Nuevo</a>
@@ -25,7 +25,7 @@
 						<tr *ngFor="let cliente of clientes">
 							<th scope="row" colspan="2">{{cliente.idCliente}}</th>
 							<td colspan="2">{{cliente.nombreCliente}}</td>
-							<td colspan="2"><button type="button" style="background-color: Transparent; outline:none;background-repeat:no-repeat; border: none;cursor:pointer; overflow: hidden" (click)="deleteCliente(cliente)"><span class="fa fa-times "></span></button></td>
+							<td colspan="2"><button type="button" style="background-color: Transparent; outline:none;background-repeat:no-repeat; border: none;cursor:pointer; overflow: hidden" (click)="deleteCliente(cliente)"><span class="fa fa-trash-o"></span></button></td>
 						</tr>
 					</tbody>
 				</table>

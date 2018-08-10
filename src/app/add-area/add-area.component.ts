@@ -6,6 +6,7 @@ import {Form} from '@angular/forms';
 import { ClienteService } from '../servicios/cliente.service';
 import { Cliente } from '../modelos/cliente';
 import { LayoutService } from 'angular-admin-lte';
+import {Token} from '../modelos/token';
 @Component({
   selector: 'app-add-area',
   templateUrl: './add-area.component.html',
@@ -16,7 +17,7 @@ export class AddAreaComponent implements OnInit {
 	constructor(private _router: Router,private _areaServicio: ServicioAreaService, private _clienteService: ClienteService) { }
   public area= new Area();
   public clientes: Cliente[];
-  
+  public token: Token;
   ngOnInit() {
 
     this._clienteService.getAllClientes().subscribe(
@@ -26,11 +27,17 @@ export class AddAreaComponent implements OnInit {
       },
       Error => {
         console.log(Error);
+      });
+
+    this._areaServicio.getToken().subscribe(
+      data=>{
+        this.token=data;
       })
   }
 
   createArea() {
-  	this._areaServicio.createArea(this.area).subscribe(data=>{
+    console.log(this.token);
+  	this._areaServicio.createArea(this.area, this.token).subscribe(data=>{
   		console.log(data);
 
   	},

@@ -43,7 +43,7 @@ const routes: Routes = [
 	{ path:'ShowClientes',component:ClienteComponent, pathMatch: 'full'},
 	{ path:'reporteAnexo', component:ReportePagosComponent, pathMatch: 'full'},
 	{ path: 'pagoAnexos', component: PagosAnexoComponent, pathMatch: 'full'},
-	{ path: 'addAnexo', component: , pathMatch: 'full'},
+	{ path: 'addAnexo', component:AddAnexoComponent , pathMatch: 'full'},
 	{ path:'showAnexos',component: AnexoComponent, pathMatch: 'full'},
 //bryan
 	{ path: 'users', component: UserComponent, pathMatch: 'full' },
@@ -64,7 +64,7 @@ const routes: Routes = [
 	{ path:'nuevoconsultor', component:NuevoConsultor, pathMatch:'full'},
 	{ path: 'buscarconsultor', component: BuscarConsultor, pathMatch: 'full' },
 	{ path: 'consultarbajas', component: ConsultarBajas, pathMatch: 'full' },
-	{ path:'',component: AreaComponent, pathMatch: 'full'},
+	{ path: '',component: AreaComponent, pathMatch: 'full'},
 	{ path:'perfiles', component:PerfilComponent, pathMatch: 'full'},
 	{ path:'addPerfiles', component:AddPerfilComponent, pathMatch: 'full'}
 

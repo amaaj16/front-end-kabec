@@ -1,16 +1,24 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import { HttpEvent, HttpHandler, HttpInterceptor, HttpRequest, HttpResponse,HttpErrorResponse } from '@angular/common/http';
-import{User} from '../models/user.model';
+import{User} from '../modelos/user.model';
+import {ServicioAreaService} from '../servicios/servicio-area.service';
+import {Token} from '../modelos/token';
 @Injectable({
   providedIn: 'root'
 })
 export class InterceptorPeticionesService implements HttpInterceptor {
+  token: Token;
+  constructor(private _auth: ServicioAreaService) { }
+  intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
 
-  constructor() { }
-  intercept(req: HttpRequest<User>, next: HttpHandler): Observable<HttpEvent<any>> {
+  this._auth.getToken().subscribe(data=>{
+    this.token=data;
+  });
+  
   const clonedRequest = req.clone({
-    responseType: 'text'
+    responseType: 'json',
+    headers: req.headers.set('Authorization',this.token.token);
   });
 
   return next.handle(clonedRequest)

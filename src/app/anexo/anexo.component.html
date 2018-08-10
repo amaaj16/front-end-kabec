@@ -2,30 +2,30 @@
 	<div class="center-block">
 	<div class="row">
 		<div class="col-md-4">
-			<h2 style="margin-top: 20px; margin-bottom: 0px">Anexos</h2>
+			<h2 style="margin-top: 20px; margin-bottom: 0px; ">Anexos</h2>
 		</div>
 		
 	</div>
 	
-	<hr align="left" noshade="noshade" size="1" style="background-color: grey; margin-top: 0px; margin-bottom: 0px" />
+	<hr style="margin-top: 0px; margin-bottom: 0px;  border: 0; height: 1px; background: #333; background-image: linear-gradient(to right, #ccc, #333, #ccc);" />
 	<div class="row">
 		<div class="col-md-4">
       		<a routerLink="/addAnexos" class="btn btn-success" style="margin-top: 20px; margin-bottom: 20px;">+Nuevo</a>
     	</div>
 	</div>
-	<table class="table-list table table-hover table-responsive" style="background: white" >
+	<table class="table table-hover table-sm table-responsive-lg " style="background: white" >
 		<thead class="thead-ligth">
 			<tr>
-				<th scope="col" colspan="2">Anexo ú Orden de Compra</th>
-				<th scope="col" colspan="2">Clave Presupuestal</th>
-				<th scope="col" colspan="2">Fecha de Inicio</th>
-				<th scope="col" colspan="2">Fecha de Fin</th>
-				<th scope="col" colspan="2">importe del Anexo</th>
-				<th scope="col" colspan="2">Monto por Pago</th>
-				<th scope="col" colspan="2">Numero de Pagos</th>
-				<th scope="col" colspan="2">Cliente</th>
-				<th scope="col" colspan="2">Periodo</th>
-				<th scope="col" colspan="2">Acción</th>
+				<th scope="col" colspan="2" class="text-sm-left">Anexo ú Orden de Compra</th>
+				<th scope="col" colspan="2" class="text-sm-left">Clave Presupuestal</th>
+				<th scope="col" colspan="2" class="text-sm-left">Fecha de Inicio</th>
+				<th scope="col" colspan="2" class="text-sm-left">Fecha de Fin</th>
+				<th scope="col" colspan="2" class="text-sm-left">importe del Anexo</th>
+				<th scope="col" colspan="2" class="text-sm-left">Monto por Pago</th>
+				<th scope="col" colspan="2" class="text-sm-left"># Pagos</th>
+				<th scope="col" colspan="2" class="text-sm-left">Cliente</th>
+				<th scope="col" colspan="2" class="text-sm-left">Periodo</th>
+				<th scope="col" colspan="2" class="text-sm-left">Acción</th>
 			</tr>
 		</thead>
 		<tbody>
@@ -34,12 +34,12 @@
 				<td colspan="2">{{anexo.clavepresupuestal}}</td>
 				<td colspan="2">{{anexo.fechaInicio}}</td>
 				<td colspan="2">{{anexo.fechaFin}}</td>
-				<td colspan="2">{{anexo.importeanexo}}</td>
-				<td colspan="2">{{anexo.montoxpago}}</td>
+				<td colspan="2">${{anexo.importeanexo}}</td>
+				<td colspan="2">${{anexo.montoxpago}}</td>
 				<td colspan="2">{{anexo.numeropagos}}</td>
 				<td colspan="2">{{anexo.cliente.nombreCliente}}</td>
 				<td colspan="2">{{anexo.periodo.periodo}}</td>
-				<td colspan="2"><button type="button" style="background-color: Transparent; outline:none;background-repeat:no-repeat; border: none;cursor:pointer; overflow: hidden" (click)="deleteanexo(anexo)"><span class="fa fa-times"></span></button></td>
+				<td colspan="2"><button type="button" style="background-color: Transparent; outline:none;background-repeat:no-repeat; border: none;cursor:pointer; overflow: hidden" (click)="deleteanexo(anexo)"><span class="fa fa-trash-o"></span></button></td>
 			</tr>
 		</tbody>
 	</table>
