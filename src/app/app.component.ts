@@ -11,12 +11,15 @@ import {HttpClient} from '@angular/common/http';
 })
 
 export class AppComponent implements OnInit {
-	
+	public customLayout: boolean;
 	constructor(private layoutService: LayoutService, private http:HttpClient) {
 	 }
 
 
 	ngOnInit() {
+		this.layoutService.isCustomLayout.subscribe((value: boolean) => {
+      this.customLayout = value;
+    });
 
 	}
 }

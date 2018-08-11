@@ -5,6 +5,11 @@ import {Observable} from 'rxjs/Observable';
 import { LayoutService } from 'angular-admin-lte';
 import { UrlConfigService } from '../url-config.service';
 
+const httpOptions={
+	headers: new HttpHeaders({'Content-Type':'Application/Json'})
+
+};
+
 @Injectable({
   providedIn: 'root'
 })
@@ -19,4 +24,8 @@ export class PerfilserviceService {
   deletePerfil(perfil:Perfil){
   	return this._http.delete(this._urlConfig+'deletePerfil?idPerfil='+perfil.idPerfil)
   }
+
+  addPerfil(perfil:Perfil){
+		return this._http.post(this._urlConfig.urlConfig + 'addPerfil', perfil, httpOptions);
+	}
 }

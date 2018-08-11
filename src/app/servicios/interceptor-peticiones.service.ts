@@ -18,7 +18,7 @@ export class InterceptorPeticionesService implements HttpInterceptor {
   
   const clonedRequest = req.clone({
     responseType: 'json',
-    headers: req.headers.set('Authorization',this.token.token);
+    headers: req.headers.set('Authorization',this.token.token)
   });
 
   return next.handle(clonedRequest)

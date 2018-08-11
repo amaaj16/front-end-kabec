@@ -5,8 +5,7 @@
   @import "../node_modules/admin-lte/dist/css/skins/skin-blue.css";
   @import "../node_modules/admin-lte/dist/css/skins/skin-black.css";
   @import "../node_modules/admin-lte-css/dist/css/skins/_all-skins.css";
-
-  
+  @import "../node_modules/prismjs/themes/prism-tomorrow.css";
 .table-bordered > thead > tr > th,
 .table-bordered > tbody > tr > th,
 .table-bordered > tfoot > tr > th,

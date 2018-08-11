@@ -27,8 +27,6 @@ export class ServicioAreaService {
  		console.error(`Backend return code ${error.status},`+`body was:${error.error}`);
  	}
 
- 	return throwError(
- 		'something bad happend: pleace try again later.');
  };
   constructor(private _httpCliente: HttpClient, private urlConfig:UrlConfigService) { }
 

@@ -105,7 +105,7 @@ import {PerfilserviceService} from './servicios/perfilservice.service';
     LoadingPageModule, MaterialBarModule,
     HttpClientXsrfModule.withOptions({
       cookieName:'myCookie',
-      headerName 'myHeader'
+      headerName:'myHeader'
     })
 
   ],
