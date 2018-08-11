@@ -1,27 +1,41 @@
 # FrontEndKabec
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8.
+Este projecto esta creado con angular y sirve a un servidor local, Esta diceñado para la empresa Soluciones Kabec y utiliza una plantilla llamada admin-lte, con un modulo de angular "admin-lte".
 
-## Development server
+# Instalacion
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Descargar e instalar nodejs la version tls, instalar npm en caso de ue no lo instale nodejs.
 
-## Code scaffolding
+Una ves instalado nodejs verivicamos en la terminal la instalcion con el comando nodejs -v y npm -v.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Instalar TypeScript
+  npm install -g TypeScript
 
-## Build
+Instalar Angular
+  npm install -g @angular/cli
+ 
+                                              Nota:Para modificar el proyecto puesdes utilizar cualuier editor de texto.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+# Instalar modulos
 
-## Running unit tests
+Despues de haber clonado en repocitorio en tu repocitorio local. desde la terminal entra en la direcion del repositorio "path/front-end-kabec" y ejecuta el comando npm install para instalar todos los mudulos necesarios de angular.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+# Ejcutar Proyecto
 
-## Running end-to-end tests
+En la terminar ingresa la ruta del proyecto y entra en dicha carpeta ejecuta el siguiente comando:
+      ng serve
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+# Actualizar modulo admin-lte
 
-## Further help
+Para actualizar el modulo de nodejs 
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+# Poner en Produción
+
+En la terminar ingresa la ruta del proyecto y entra en dicha carpeta ejecuta el siguiente comando:
+      ng build --prod
+
+Se generara una nueva carpeta llamada dist. Esta carpeta la deveras copiar y montarla en un servidor web, se utiliza Xampp,
+se copia la carpeta dist en la carpeta htdocs de Xampp y se ejecuta el servidor Xampp.
+
+
