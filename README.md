@@ -27,7 +27,8 @@ En la terminar ingresa la ruta del proyecto y entra en dicha carpeta ejecuta el 
 
 # Actualizar modulo admin-lte
 
-Para actualizar el modulo de nodejs 
+Para actualizar el modulo de nodejs admin-lte. clone el siguiente repositorio https://github.com/mika-el/angular-admin-lte.git 
+dentro del proyecto se encuentran la carpeta con la libreria. busca en los modulos de tu proyecto el modulo admin-lte y copia y pega los archivos de la nueva libreria admin-lte. 
 
 
 # Poner en Produción
