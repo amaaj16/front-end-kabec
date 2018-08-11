@@ -14,7 +14,7 @@ Instalar TypeScript
 Instalar Angular
   npm install -g @angular/cli
  
-                                              Nota:Para modificar el proyecto puesdes utilizar cualuier editor de texto.
+                                Nota:Para modificar el proyecto puesdes utilizar cualuier editor de texto.
 
 # Instalar modulos
 
