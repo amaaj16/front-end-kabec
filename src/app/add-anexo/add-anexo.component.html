@@ -1,3 +1,4 @@
+<!-- (ngSumbmit) manda a llamar al metodo en el cual se realiza la peticion pasando los parametros del objeto que se desea mandar [(ngmodel)] recoje los datos del formulario y los inserta en el objeto deseado-->
 <form (ngSubmit)="agregarAnexo()">
 
 	<div class="form-group">
@@ -73,6 +74,7 @@
 	<div class="form-group">
 		<label for="cliente" class="col-4 col-form-label">Cliente</label>
 		<div class="col-10">
+			<!--El for recore el objeto clientes para depligar todos los clientes e itrarlos para imprimirlos en un objeto html option, el objeto clientes es llamdo desde en componente -->
 			<select name="cliente" class="custom-select" [(ngModel)]="anexo.cliente.idCliente" >
 				<option *ngFor="let cliente of clientes" [value]="cliente.idCliente" >{{cliente.nombreCliente}}</option>
 			</select>
