@@ -16,5 +16,10 @@
       "es2017",
       "dom"
     ],
+    "paths": {
+      "angular-admin-lte": [
+        "library/angular-admin-lte/src"
+      ]
+    }
   }
 }

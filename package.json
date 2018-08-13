@@ -40,7 +40,7 @@
     "popper.js": "^1.14.3",
     "prismjs": "^1.15.0",
     "rxjs": "^6.2.2",
-    "rxjs-compat": "^6.0.0-rc.0",
+    "rxjs-compat": "^6.2.1",
     "typescript.list": "^6.7.0",
     "xlsx": "^0.13.2",
     "zone.js": "^0.8.26"
