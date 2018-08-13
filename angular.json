@@ -128,19 +128,7 @@
           }
         }
       }
-    },
-    "front-end-kabec-demo": {
-      "root": "library/angular-admin-lte",
-      "sourceRoot": "library/angular-admin-lte/src",
-      "projectType": "library",
-      "prefix": "lib",
-      "architect": {
-        "build": {
-          "builder": "@angular-devkit/build-ng-packagr:build",
-          "options": {
-            "tsConfig": "library/angular-admin-lte/tsconfig.lib.json",
-            "project": "library/angular-admin-lte/ng-package.json"
-          }
+    }
   },
   "defaultProject": "front-end-kabec",
   "cli": {
