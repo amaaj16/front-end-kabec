@@ -42,6 +42,7 @@ export class AnexoComponent implements OnInit {
     this._periodoService.getAllPeriodos().subscribe(
       data=>{
         this.periodos=data;
+        console.log(data);
       })
   	
   }

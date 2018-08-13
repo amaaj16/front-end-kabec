@@ -31,7 +31,7 @@
 		</thead>
 		<tbody>
 			<!--itera la lista anexos para mustrarla en el documento html-->
-			<tr *ngFor="let anexo of anexos; let cliente of clientes;let periodo of periodos">
+			<tr *ngFor="let anexo of anexos;  let cliente of clientes">
 				<th scope="row" colspan="2">{{anexo.anexooc}}</th>
 				<td colspan="2">{{anexo.clavepresupuestal}}</td>
 				<td colspan="2">{{anexo.fechaInicio}}</td>
