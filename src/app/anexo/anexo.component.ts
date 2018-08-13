@@ -1,8 +1,14 @@
+/*importa todos los servicios, componentes necesarios para el funcionamiento correcto de este componente*/
 import { Component, OnInit } from '@angular/core';
-import { Anexo } from '../modelos/anexo';
-import { PagosAnexosService } from '../servicios/pagos-anexos.service';
 import { Router } from '@angular/router';
-import { LayoutService } from 'angular-admin-lte';
+
+/*MOdelos de los objetos que se utilizan 
+para la entrada y salida de datos que reciben las peticiones de los servicios*/
+import { Anexo } from '../modelos/anexo';
+
+//Servicio  realiza las peticiones al backen atraves de protocolos http 
+import { PagosAnexosService } from '../servicios/pagos-anexos.service';
+
 @Component({
   selector: 'app-anexo',
   templateUrl: './anexo.component.html',

@@ -20,7 +20,10 @@
             "tsConfig": "src/tsconfig.app.json",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              { "glob": "**/*", "input": "./node_modules/ngx-admin-lte/src/public/assets", "output": "./assets" },  
+              { "glob": "**/*", "input": "./node_modules/ngx-admin-lte/src/public/assets/img", "output": "./assets/img" },  
+              { "glob": "**/*", "input": "./node_modules/ngx-admin-lte/src/public/assets/i18n", "output": "./assets/i18n" }
             ],
             "styles": [
               "src/styles.css"

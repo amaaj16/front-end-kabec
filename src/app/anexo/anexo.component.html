@@ -10,6 +10,7 @@
 	<hr style="margin-top: 0px; margin-bottom: 0px;  border: 0; height: 1px; background: #333; background-image: linear-gradient(to right, #ccc, #333, #ccc);" />
 	<div class="row">
 		<div class="col-md-4">
+			<!--routerLink envia a la direcion declarada en el modulo routin-->
       		<a routerLink="/addAnexos" class="btn btn-success" style="margin-top: 20px; margin-bottom: 20px;">+Nuevo</a>
     	</div>
 	</div>
@@ -29,6 +30,7 @@
 			</tr>
 		</thead>
 		<tbody>
+			<!--itera la lista anexos para mustrarla en el documento html-->
 			<tr *ngFor="let anexo of anexos">
 				<th scope="row" colspan="2">{{anexo.anexooc}}</th>
 				<td colspan="2">{{anexo.clavepresupuestal}}</td>
