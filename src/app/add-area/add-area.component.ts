@@ -38,7 +38,6 @@ export class AddAreaComponent implements OnInit {
     que se mostraran en el componente options en el formulario */
     this._clienteService.getAllClientes().subscribe(
       data => {
-        console.log(data);
         this.clientes = data;
       },
       Error => {
@@ -53,9 +52,7 @@ export class AddAreaComponent implements OnInit {
 
   //metodos que recoje los datos insertados en el formulario y envia al backend
   createArea() {
-    console.log(this.token);
   	this._areaServicio.createArea(this.area, this.token).subscribe(data=>{
-  		console.log(data);
       alert("Se Créo Area");
 
   	},

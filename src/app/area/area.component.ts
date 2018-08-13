@@ -47,9 +47,9 @@ export class AreaComponent implements OnInit {
     this._areaService.deleteArea(area)
     .subscribe ( data=>{
       this.areas = this.areas.filter(u => u != area);
-      alert("Area Eliminada");
+      alert("Area Eliminada Exitosamente");
       },Error=>{
-        alert("No se puede eliminar el Area:"+area+" debido a que esta siendo usada.")
+        alert("No se puede eliminar el Area:"+area.nombreArea+" debido a que esta siendo usada.")
       })
 
   };

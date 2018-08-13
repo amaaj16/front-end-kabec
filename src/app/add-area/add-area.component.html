@@ -11,9 +11,7 @@
 		<label for="Cliente" class="col-4 col-form-label">Cliente</label>
 		<div class="col-10">
 
-			<select class="custom-select" [(ngModel)]="area.idCliente" name="idCliente" >
-
-			<select class="custom-select" [(ngModel)]="area.cliente.idCliente" name="idCliente" >
+			<select class="custom-select" [(ngModel)]="area.idCliente.idCliente" name="idCliente" >
 				<!--El for recore el objeto clientes para depligar todos los clientes e itrarlos para imprimirlos en un objeto html option, el objeto clientes es llamdo desde en componente -->
 				<option *ngFor="let cliente of clientes" [value]="cliente.idCliente">{{cliente.nombreCliente}}</option>
 			</select>

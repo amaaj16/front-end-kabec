@@ -3,6 +3,13 @@ export class Area {
 	nombreArea: any;
 	idCliente: any;
 
+	constructor(){
+	this.idCliente = {
+		  idCliente: '',
+		  nombreCliente: ''
+	  };
+	 }
+
 
 	
 

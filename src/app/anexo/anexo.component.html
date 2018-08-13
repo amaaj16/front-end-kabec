@@ -11,7 +11,7 @@
 	<div class="row">
 		<div class="col-md-4">
 			<!--routerLink envia a la direcion declarada en el modulo routin-->
-      		<a routerLink="/addAnexos" class="btn btn-success" style="margin-top: 20px; margin-bottom: 20px;">+Nuevo</a>
+      		<a routerLink="/addAnexo" class="btn btn-success" style="margin-top: 20px; margin-bottom: 20px;">+Nuevo</a>
     	</div>
 	</div>
 	<table class="table table-hover table-sm table-responsive-lg " style="background: white" >
@@ -31,7 +31,7 @@
 		</thead>
 		<tbody>
 			<!--itera la lista anexos para mustrarla en el documento html-->
-			<tr *ngFor="let anexo of anexos">
+			<tr *ngFor="let anexo of anexos; let cliente of clientes;let periodo of periodos">
 				<th scope="row" colspan="2">{{anexo.anexooc}}</th>
 				<td colspan="2">{{anexo.clavepresupuestal}}</td>
 				<td colspan="2">{{anexo.fechaInicio}}</td>
@@ -39,8 +39,8 @@
 				<td colspan="2">${{anexo.importeanexo}}</td>
 				<td colspan="2">${{anexo.montoxpago}}</td>
 				<td colspan="2">{{anexo.numeropagos}}</td>
-				<td colspan="2">{{anexo.cliente.nombreCliente}}</td>
-				<td colspan="2">{{anexo.periodo.periodo}}</td>
+				<td colspan="2" *ngIf="cliente.idCliente== anexo.idCliente">{{cliente.nombreCliente}}</td>
+				<td colspan="2" *ngIf="periodo.idperiodo== anexo.idperiodo">{{periodo.periodo}}</td>
 				<td colspan="2"><button type="button" style="background-color: Transparent; outline:none;background-repeat:no-repeat; border: none;cursor:pointer; overflow: hidden" (click)="deleteanexo(anexo)"><span class="fa fa-trash-o"></span></button></td>
 			</tr>
 		</tbody>
