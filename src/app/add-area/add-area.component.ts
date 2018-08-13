@@ -39,6 +39,7 @@ export class AddAreaComponent implements OnInit {
     console.log(this.token);
   	this._areaServicio.createArea(this.area, this.token).subscribe(data=>{
   		console.log(data);
+      alert("Se Créo Area");
 
   	},
   	error=>{

@@ -129,7 +129,7 @@
         }
       }
     },
-    "ront-end-kabec-demo": {
+    "front-end-kabec-demo": {
       "root": "library/angular-admin-lte",
       "sourceRoot": "library/angular-admin-lte/src",
       "projectType": "library",

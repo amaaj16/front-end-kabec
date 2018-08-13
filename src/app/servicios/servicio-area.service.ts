@@ -43,7 +43,7 @@ export class ServicioAreaService {
 
 	};
 
-	createArea(area:Area, token: Token): Observable<any>{
+	createArea(area:Area, token: Token): Observable<Area>{
 		return	this.response=this._httpCliente.post<Area>(this.urlConfig.urlConfig + 'addArea', area, httpOptions);
 	}
 
