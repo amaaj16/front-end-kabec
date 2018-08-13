@@ -12,7 +12,6 @@ import { Cliente } from '../modelos/cliente';
 import {Router} from '@angular/router';
 //libreria form necesaria cuando se trabaja con formularios
 import {Form} from '@angular/forms';
-import { ClienteService } from '../servicios/cliente.service';
 
 import { LayoutService } from 'angular-admin-lte';
 import {Token} from '../modelos/token';
