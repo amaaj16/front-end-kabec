@@ -39,7 +39,7 @@ export class ServicioAreaService {
   }
 
   deleteArea(area: Area){
-	  return this._httpCliente.delete(this.urlConfig.urlConfig + 'delArea?idArea=' + area.idArea);
+	  return this._httpCliente.get(this.urlConfig.urlConfig + 'delArea?idArea=' + area.idArea);
 
 	};
 
