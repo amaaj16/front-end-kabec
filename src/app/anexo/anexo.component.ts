@@ -47,6 +47,16 @@ export class AnexoComponent implements OnInit {
   	
   }
 
+  deleteAnexo(anexo:Anexo){
+    this._servicio.deleteAnexo(anexo).subscribe ( data=>{
+      this.anexos = this.anexos.filter(u => u != anexo);
+      alert("Area Eliminada Exitosamente");
+      },Error=>{
+        console.log(Error);
+        alert("No se puede eliminar el Anexo:"+anexo.anexooc+" debido a que esta siendo usado.")
+      })
+  }
+
  
 
 }

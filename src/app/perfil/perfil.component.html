@@ -10,7 +10,7 @@
   <hr style="margin-top: 0px; margin-bottom: 0px;  border: 0; height: 1px; background: #333; background-image: linear-gradient(to right, #ccc, #333, #ccc);" />
   <div class="row">
     <div class="col-md-4">
-          <a routerLink="/addNominas" class="btn btn-success" style="margin-top: 20px; margin-bottom: 20px;">+Nuevo</a>
+          <a routerLink="/addPerfiles" class="btn btn-success" style="margin-top: 20px; margin-bottom: 20px;">+Nuevo</a>
       </div>
   </div>
 <table class="table  table-responsive-sm table table-hover" style="background: white">
@@ -22,8 +22,8 @@
   </thead>
   <tbody>
   <tr *ngFor="let perfil of perfiles">
-    <td>{{perfil.idPerfil}}</td>
-    <td>{{pefil.tipoPerfil}}</td>
+    <th scope="row" colspan="2">{{perfil.idPerfil}}</th>
+    <td colspan="2">{{pefil.tipoPerfil}}</td>
     <td colspan="2"><button type="button"  style="background-color: Transparent; outline:none;background-repeat:no-repeat; border: none;cursor:pointer; overflow: hidden" (click)="deletePerfil(perfil)"><span class="fa fa-trash-o"></span></button></td>
   </tr>
   </tbody>

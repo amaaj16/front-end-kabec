@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
+
 import { Complemento } from '../modelos/complemento.model';
 import { ComplementoService } from './complemento.service';
 
@@ -17,11 +18,11 @@ export class AddComplementoComponent {
 
   }
 
-  createComplemento(): void {
+  createComplemento()  {
       this.complementoService.createComplemento(this.complemento)
         .subscribe( data => {
           alert("Complemento creado con exito");
-        });
+        },Error=>console.log(Error));
     };
 
   }

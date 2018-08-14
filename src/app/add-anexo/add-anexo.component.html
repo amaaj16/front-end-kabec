@@ -32,13 +32,13 @@
 	<div class="form-group">
 			<label for="fechainicio" class="col-4 col-form-label" style="display: inline;">Fecha de Inicio del Anexo</label>
 			<div class="col-10">
-				<input class="col-mb-4 form-control"  type="text" name="fechainicio" [(ngModel)]="anexo.fechaInicio">	
+				<input class="col-mb-4 form-control"  type="date" name="fechainicio" [(ngModel)]="anexo.fechaInicio">	
 			</div>
 	</div>
 	<div class="form-group">
 			<label for="fechafin" class="col-4 col-form-label" style="display: inline;">Fecha de Termino del Anexo</label>
 			<div class="col-10">
-				<input class="col-mb-4 form-control"  type="text" name="fechafin" [(ngModel)]="anexo.fechaFin">	
+				<input class="col-mb-4 form-control"  type="date" name="fechafin" [(ngModel)]="anexo.fechaFin">	
 			</div>
 	</div>
 
@@ -75,7 +75,7 @@
 		<label for="cliente" class="col-4 col-form-label">Cliente</label>
 		<div class="col-10">
 			<!--El for recore el objeto clientes para depligar todos los clientes e itrarlos para imprimirlos en un objeto html option, el objeto clientes es llamdo desde en componente -->
-			<select name="cliente" class="custom-select" [(ngModel)]="anexo.cliente.idCliente" >
+			<select name="cliente" class="custom-select" [(ngModel)]="anexo.idCliente.idCliente" >
 				<option *ngFor="let cliente of clientes" [value]="cliente.idCliente" >{{cliente.nombreCliente}}</option>
 			</select>
 		</div>
@@ -84,7 +84,7 @@
 	<div class="form-group">
 		<label for="Anexo" class="col-4 col-form-label">Periodo</label>
 		<div class="col-10">
-			<select name="anexo" style="color:black"class="custom-select" [(ngModel)]="anexo.periodo.idperiodo" >
+			<select name="anexo" style="color:black"class="custom-select" [(ngModel)]="anexo.idperiodo.idperiodo" >
 				<option [value]="1" >Mensual</option>
 				<option [value]="2" >Bimestral</option>
 				<option [value]="3" >Trimestral</option>

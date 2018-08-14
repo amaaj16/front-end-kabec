@@ -18,11 +18,11 @@ export class PerfilserviceService {
   constructor(private _http:HttpClient, private _urlConfig: UrlConfigService) { }
 
   getPerfiles(): Observable<any>{
-  	return this._http.get<Perfil>(this._urlConfig+'perfiles');
+  	return this._http.get<Perfil>(this._urlConfig.urlConfig+'perfiles');
   }
 
   deletePerfil(perfil:Perfil){
-  	return this._http.delete(this._urlConfig+'deletePerfil?idPerfil='+perfil.idPerfil)
+  	return this._http.delete(this._urlConfig.urlConfig+'deletePerfil?idPerfil='+perfil.idPerfil)
   }
 
   addPerfil(perfil:Perfil){

@@ -21,7 +21,7 @@ export class NominaService {
   }
 
   public deleteNomina(nomina) {
-    return this.http.delete(this.urlConfg.urlConfig+'nomina' + "/"+ nomina.contratoNomina);
+    return this.http.get(this.urlConfg.urlConfig+'nomina' + "/"+"delNomina?idNomina="+ nomina.contratoNomina);
   }
 
   public createNomina(nomina) {

@@ -22,15 +22,17 @@ export class ComplementoComponent implements OnInit {
   ngOnInit() {
     this.complementoService.getComplemento().subscribe( data => {
            this.complementos = data;
+           console.log(data);
          });
      };
 
 
-     deleteComplemento(complemento: Complemento): void {
+     deleteComplemento(complemento: Complemento){
          this.complementoService.deleteComplemento(complemento)
            .subscribe( data => {
+
              this.complementos = this.complementos.filter(u => u !== complemento);
-           })
+           },Error=>console.log(Error))
        };
 
      }

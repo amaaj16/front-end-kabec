@@ -24,7 +24,7 @@ export class ClienteService {
 	}
 
 	deleteCliente(cliente:Cliente){
-		return this._http.delete(this.urlConfig.urlConfig + 'deleteCliente?idCliente=' + cliente.idCliente);
+		return this._http.get(this.urlConfig.urlConfig + 'deleteCliente?idCliente=' + cliente.idCliente);
 	}
 
 	addCliente(cliente:Cliente){

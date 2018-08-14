@@ -32,7 +32,7 @@ export var adminLteConf = {
 	  ]},*/
 
 	  {label:'Metricas', iconClasses:'fa fa-pie-chart',children:[
-	  		{ label: 'Metricas', iconClasses: 'none', route: '/nuevousuario' },
+	  		{ label: 'Actividad de Consultores', iconClasses: 'none', route: '/graficaConsultores' },
 	  ]},
 
 	  {label:'Administración',iconClasses:'fa fa-laptop',children:[

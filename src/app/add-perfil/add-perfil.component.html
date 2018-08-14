@@ -1,20 +1,10 @@
 <!-- (ngSumbmit) manda a llamar al metodo en el cual se realiza la peticion pasando los parametros del objeto que se desea mandar ,[(ngmodel)] recoje los datos del formulario y los inserta en el objeto deseado-->
 <form (ngSubmit)="createPerfil()">
 	<div class="form-group">
-		<label for="nombreArea" class="col-4 col-form-label">Nombre del Perfil</label>
+		<label for="nombreArea" class="col-4 col-form-label">Perfil</label>
 		<div class="col-10">
-			<input type="text" [(ngModel)]="area.nombreArea" class="form-control" name="nombreArea" id="nombreArea">
+			<input type="text" [(ngModel)]="perfil.tipoPerfil" class="form-control" name="perfil" id="perfil">
 		</div>
 	</div>
-
-	<div class="form-group">
-		<label for="Cliente" class="col-4 col-form-label">Cliente</label>
-		<div class="col-10">
-			<select class="custom-select" [(ngModel)]="area.cliente.idCliente" name="idCliente" >
-				<!--El for recore el objeto clientes para depligar todos los clientes e itrarlos para imprimirlos en un objeto html option, el objeto clientes es llamdo desde en componente -->
-				<option *ngFor="let cliente of clientes" [value]="cliente.idCliente">{{cliente.nombreCliente}}</option>
-			</select>
-		</div>
-	</div>
-	<input type="Submit" value="Crear" class="btn btn-success">
+	<input type="Submit" value="Crear Perfil" class="btn btn-success">
 </form>

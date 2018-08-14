@@ -32,6 +32,7 @@ import {BuscarConsultor} from './buscarconsultor/buscarconsultor.component';
 import {ConsultarBajas} from './consultarbajas/consultarbajas.component';
 import {PerfilComponent} from './perfil/perfil.component';
 import {AddPerfilComponent} from './add-perfil/add-perfil.component';
+import {GraficaConsultoresComponent} from './grafica-consultores/grafica-consultores.component';
 
 const routes: Routes = [
 	
@@ -66,7 +67,8 @@ const routes: Routes = [
 	{ path: 'consultarbajas', component: ConsultarBajas, pathMatch: 'full' },
 	{ path: '',component: AreaComponent, pathMatch: 'full'},
 	{ path:'perfiles', component:PerfilComponent, pathMatch: 'full'},
-	{ path:'addPerfiles', component:AddPerfilComponent, pathMatch: 'full'}
+	{ path:'addPerfiles', component:AddPerfilComponent, pathMatch: 'full'},
+	{ path:'graficaConsultores', component:GraficaConsultoresComponent, pathMatch: 'full'}
 
 ];
 

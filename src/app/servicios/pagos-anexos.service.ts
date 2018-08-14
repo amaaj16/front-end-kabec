@@ -41,7 +41,7 @@ export class PagosAnexosService {
 		return this._http.get<RegistroAsignacion>(this.urlConfig.urlConfig + 'Asignacion');
 	}
 
-	deleteanexo(anexo:Anexo){
-		return this._http.delete(this.urlConfig + 'delAnexo?idAnexo=' + anexo.idanexo)
+	deleteAnexo(anexo:Anexo){
+		return this._http.get(this.urlConfig.urlConfig + 'delAnexo?idAnexo=' + anexo.idanexo)
 	}
 }

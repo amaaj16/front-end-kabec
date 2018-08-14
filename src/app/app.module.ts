@@ -59,6 +59,7 @@ import {UrlConfigService} from './url-config.service';
 import { PerfilComponent } from './perfil/perfil.component';
 import { AddPerfilComponent } from './add-perfil/add-perfil.component';
 import {PerfilserviceService} from './servicios/perfilservice.service';
+import { GraficaConsultoresComponent } from './grafica-consultores/grafica-consultores.component';
 @NgModule({
   declarations: [
     //lAYOUTS
@@ -89,7 +90,8 @@ import {PerfilserviceService} from './servicios/perfilservice.service';
     NoasignadosComponent,
     ContratoService,
     PerfilComponent,
-    AddPerfilComponent
+    AddPerfilComponent,
+    GraficaConsultoresComponent
 
 
   ],

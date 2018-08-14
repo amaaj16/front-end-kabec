@@ -1,7 +1,7 @@
 import {Injectable} from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { UrlConfigService } from '../url-config.service';
-
+import { Observable } from 'rxjs/Observable';
 import { Complemento } from '../modelos/complemento.model';
 
 
@@ -21,11 +21,11 @@ export class ComplementoService {
   }
 
   public deleteComplemento(complemento) {
-    return this.http.delete(this.urlConfig.urlConfig+'complento' + "/"+ complemento.empComplemento);
+    return this.http.get(this.urlConfig.urlConfig+'complemento' + "/"+"deleteComplemento?idComplemento="+ complemento.empComplemento);
   }
 
-  public createComplemento(complemento) {
-    return this.http.post<Complemento>(this.urlConfig.urlConfig+'complento', complemento);
+  public createComplemento(complemento){
+    return this.http.post<Complemento>(this.urlConfig.urlConfig+'complemento', complemento);
   }
 
 }

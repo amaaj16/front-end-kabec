@@ -13,15 +13,16 @@ export class PerfilComponent implements OnInit {
   ngOnInit() {
 
   	this._perfilService.getPerfiles().subscribe(data=>{
+      console.log(data);
   		this.perfiles=data;
   	})
 
   }
 
-  deletePerfil(area:Area){
-  	this._perfilService.deletePerfil(area).subscribe(data=>{
-  		this.perfiles= this.perfiles.filter(u=> u != perfiles);
-  		 alert("Area Eliminada Exitosamente");
+  deletePerfil(perfil:Perfil){
+  	this._perfilService.deletePerfil(perfil).subscribe(data=>{
+  		this.perfiles= this.perfiles.filter(u=> u != perfil);
+  		 alert("Perfil Eliminado Exitosamente");
   	})
   }
 

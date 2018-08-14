@@ -14,17 +14,15 @@ export class Anexo {
 	tarifa: any;
 	vobo: any;
 	idCliente: any;
-	periodo: any;
+	idperiodo: any;
 
   constructor(){
 	  this.idCliente = {
-		  idCliente: '',
-		  nombreCliente: ''
+		  idCliente: ''
 	  };
 
-	  this.periodo = {
-		  idperiodo: '',
-		  periodo: ''
+	  this.idperiodo = {
+		  idperiodo: ''
 	  };
 
 

@@ -20,7 +20,8 @@ export class NominaComponent implements OnInit {
     this.nominaService.getNomina()
       .subscribe( data => {
         this.nominas = data;
-      });
+        console.log(data);
+      },Error=>console.log(Error));
     };
 
     deleteNomina(nomina: Nomina): void {

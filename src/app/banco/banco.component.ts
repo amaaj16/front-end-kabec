@@ -19,16 +19,18 @@ export class BancoComponent implements OnInit {
 
   ngOnInit() {
  this.bancoService.getBanco().subscribe( data => {
+        console.log(data);
         this.bancos = data;
       });
   };
 
 
-  deleteBanco(banco: Banco): void {
+  deleteBanco(banco: Banco) {
       this.bancoService.deleteBanco(banco)
         .subscribe( data => {
+
           this.bancos = this.bancos.filter(u => u !== banco);
-        })
+        },Error=>console.log(Error))
     };
 
   }
