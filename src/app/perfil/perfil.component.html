@@ -13,19 +13,18 @@
           <a routerLink="/addNominas" class="btn btn-success" style="margin-top: 20px; margin-bottom: 20px;">+Nuevo</a>
       </div>
   </div>
-<table class="table table-sm  table-responsive-sm table table-hover" style="background: white">
+<table class="table  table-responsive-sm table table-hover" style="background: white">
   <thead class="thead-ligth">
   <tr>
     <th scope="col" colspan="2">Id</th>
-    <th scope="col" colspan="2">Contrato Nomina</th>
-    <th scope="col" colspan="2">Acción</th>
+    <th scope="col" colspan="2">Perfil</th>
   </tr>
   </thead>
   <tbody>
-  <tr>
-    <td></td>
-    <td></td>
-    <td colspan="2"><button type="button"  style="background-color: Transparent; outline:none;background-repeat:no-repeat; border: none;cursor:pointer; overflow: hidden"><span class="fa fa-trash-o"></span></button></td>
+  <tr *ngFor="let perfil of perfiles">
+    <td>{{perfil.idPerfil}}</td>
+    <td>{{pefil.tipoPerfil}}</td>
+    <td colspan="2"><button type="button"  style="background-color: Transparent; outline:none;background-repeat:no-repeat; border: none;cursor:pointer; overflow: hidden" (click)="deletePerfil(perfil)"><span class="fa fa-trash-o"></span></button></td>
   </tr>
   </tbody>
 </table>

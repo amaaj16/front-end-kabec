@@ -32,6 +32,7 @@
 		<tbody>
 			<!--itera la lista anexos para mustrarla en el documento html-->
 			<tr *ngFor="let anexo of anexos;  let cliente of clientes">
+				<div *ngIf="anexo.idanexo; else noAnexo">
 				<th scope="row" colspan="2">{{anexo.anexooc}}</th>
 				<td colspan="2">{{anexo.clavepresupuestal}}</td>
 				<td colspan="2">{{anexo.fechaInicio}}</td>
@@ -42,8 +43,12 @@
 				<td colspan="2" *ngIf="cliente.idCliente== anexo.idCliente">{{cliente.nombreCliente}}</td>
 				<td colspan="2" *ngIf="periodo.idperiodo== anexo.idperiodo">{{periodo.periodo}}</td>
 				<td colspan="2"><button type="button" style="background-color: Transparent; outline:none;background-repeat:no-repeat; border: none;cursor:pointer; overflow: hidden" (click)="deleteanexo(anexo)"><span class="fa fa-trash-o"></span></button></td>
+			</div>
 			</tr>
 		</tbody>
 	</table>
+	<ng-template #noAnexo>
+		<div><p>¡No existe ningun Anexo aún!, Da clic en el boton "Nuevo" para agregar un Anexo.</p></div>
+	</ng-template>
 </div>
 </div>
